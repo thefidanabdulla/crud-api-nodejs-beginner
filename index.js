@@ -4,6 +4,7 @@ const Product = require("./models/product.model.js")
 const app = express();
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 // get
 app.get("/", (req, res) => {
